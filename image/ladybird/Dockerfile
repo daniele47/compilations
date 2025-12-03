@@ -9,5 +9,5 @@ USER lb
 
 RUN git clone https://github.com/LadybirdBrowser/ladybird ~/ladybird
 
-RUN ~/ladybird/Meta/ladybird.py run
+RUN cd ~/ladybird; ./Meta/ladybird.py run
 
