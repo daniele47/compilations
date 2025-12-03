@@ -1,6 +1,6 @@
 FROM fedora
 
-RUN dnf -y install ninja-build cmake gcc make gettext curl glibc-gconv-extra git zip && dnf clean all
+RUN dnf -y install ninja-build cmake gcc make gettext curl glibc-gconv-extra git zip && dnf clean all -y
 
 RUN git clone https://github.com/neovim/neovim ~/neovim
 
