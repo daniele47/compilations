@@ -13,10 +13,7 @@ USER lb
 RUN git clone https://github.com/LadybirdBrowser/ladybird /app/ladybird && \
     cd /app/ladybird && ./Meta/ladybird.py build && ! ./Meta/ladybird run && \
     if [ "$CLEAN_VCPKG" = "true" ]; then \
-        mkdir /app/lb/; \
-        mv /app/ladybird/Build/release/{bin,lib64,libexec,share} /app/lb/; \
-        rm -rf /app/ladybird; \
-        mv /app/lb /app/ladybird; \
+        rm -rf /app/ladybird/Build/{vcpkg,cache} ; \
     fi
 
 USER root
